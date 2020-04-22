@@ -1,20 +1,39 @@
-<!doctype html>
+<?php 
+
+	// Allow the config
+	define('__CONFIG__', true);
+	// Require the config
+	require_once "inc/config.php"; 
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>PHP Log-in System</title>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="follow">
 
-<!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+    <title>Page Title</title>
 
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
-<body>
-<?php echo "Hello World"; ?>
+    <base href="/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
+  </head>
 
-</body>
+  <body>
+
+  	<div class="uk-section uk-container">
+  		<?php 
+  			echo "Hello world. Today is: ";
+  			echo date("Y m d");
+  		?> 
+  		<p>
+  			<a href="/login.php">Login</a>
+  			<a href="/register.php">Register</a>
+  		</p>
+  	</div>
+
+  	<?php require_once "inc/footer.php"; ?> 
+  </body>
 </html>
